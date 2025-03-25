@@ -1973,8 +1973,9 @@ window.onload = function(){
 }
 
 function read_localStorage(char){
- console.log('Reading '+char+'\'s data');
+ console.log('Reading '+char+'\'s data...');
  let data = JSON.parse(localStorage.getItem('T20data_'+char));
+	console.log(data)
  header.bname = data.char?data.char:'';		//str
  header.bplayer = data.jogador?data.jogador:'';		//str
  header.brace = data.raça?raca[data.raça]:'';	//str	*	select > string
