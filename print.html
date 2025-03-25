@@ -2012,12 +2012,12 @@ function read_localStorage(char){
 
  defense['Defesa (habilidade)'] = data.defense.def_hab?data.defense.def_hab-1:0;	//num select	*	1>6 > 0>5
  defense['Defesa (outros)'] = data.defense.def_out?data.defense.def_out:'0';		//str
- defense.Armadura = data.defense.armor?data.defense.armor:'';				//str
- defense['Armadura (bonus)'] = data.defense.armor_bonus?data.defense.armor_bonus:'';	//str	*	num > str
- defense['Armadura (penalidade)'] = data.defense.armor_penal?data.defense.armor_penal:''	//str	*	num > str
- defense.Escudo = data.defense.shield?data.defense.shield:'';				//str
+ defense.Armadura = data.defense.armor?data.defense.armor:'0';				//str
+ defense['Armadura (bonus)'] = data.defense.armor_bonus?data.defense.armor_bonus:'0';	//str	*	num > str
+ defense['Armadura (penalidade)'] = data.defense.armor_penal?data.defense.armor_penal:'0'	//str	*	num > str
+ defense.Escudo = data.defense.shield?data.defense.shield:'0';				//str
  defense['Escudo (bonus)'] = data.defense.shield_bonus?data.defense.shield_bonus:'0';		//str	*	num > str
- defense['Escudo (penalidade)'] = data.defense.shield_penal?data.defense.shield_penal:'';	//str	*	num > str
+ defense['Escudo (penalidade)'] = data.defense.shield_penal?data.defense.shield_penal:'0';	//str	*	num > str
 
  let red = [];
  if(data.defense.rd){red.push('RD: '+data.defense.rd)}
