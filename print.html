@@ -1655,6 +1655,7 @@ function calc_def(){
  hab = hab==6?0:Math.floor(habs[hab]/2)-5 + Math.floor(effects[habs_names[hab]]/2);
 	console.log(defense);
 	console.log(defense['Defesa (outros)']);
+	console.log(defense['Escudo (bonus)']);
  var defo = JSON.parse(defense['Defesa (outros)']);
  var defa = JSON.parse(defense['Armadura (bonus)']) + effects['Armadura (bonus)'];
  var defe = JSON.parse(defense['Escudo (bonus)']) + effects['Escudo (bonus)'];
@@ -2015,7 +2016,7 @@ function read_localStorage(char){
  defense['Armadura (bonus)'] = data.defense.armor_bonus?data.defense.armor_bonus:'';	//str	*	num > str
  defense['Armadura (penalidade)'] = data.defense.armor_penal?data.defense.armor_penal:''	//str	*	num > str
  defense.Escudo = data.defense.shield?data.defense.shield:'';				//str
- defense['Escudo (bonus)'] = data.defense.shield_bonus?data.defense.shield_bonus:'';		//str	*	num > str
+ defense['Escudo (bonus)'] = data.defense.shield_bonus?data.defense.shield_bonus:'0';		//str	*	num > str
  defense['Escudo (penalidade)'] = data.defense.shield_penal?data.defense.shield_penal:'';	//str	*	num > str
 
  let red = [];
