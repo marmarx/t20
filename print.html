@@ -1653,6 +1653,8 @@ function change_def(){
 function calc_def(){
  var hab = JSON.parse(defense['Defesa (habilidade)']);
  hab = hab==6?0:Math.floor(habs[hab]/2)-5 + Math.floor(effects[habs_names[hab]]/2);
+	console.log(defense);
+	console.log(defense['Defesa (outros)']);
  var defo = JSON.parse(defense['Defesa (outros)']);
  var defa = JSON.parse(defense['Armadura (bonus)']) + effects['Armadura (bonus)'];
  var defe = JSON.parse(defense['Escudo (bonus)']) + effects['Escudo (bonus)'];
